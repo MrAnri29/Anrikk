@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>contact us!</title>
+        <link rel="shortcut icon" href="https://cdn.discordapp.com/icons/923208544231243807/39e31b500a6de3f5c16b3382391fa3fc.webp?size=1024">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="styles.css">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:500&display=swap" rel="stylesheet">
+</head>
+<body>
+          <header class>
+            <a class="logo" href="https://discord.gg/R3Jwg8Fpmk">Esta</a>
+                <ul class="nav__links">
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="#">Projects</a></li>
+                    <li><a href="contactustest.html">About</a></li>
+                    <li><a href="contactus.html">contact</a></li>
+                </ul>
+        </header>
+        <script type="text/javascript">
+            window.addEventListener("scroll", function(){
+                var header = document.querySelector("header");
+                header.classList.toggle("sticky", window.scrollY > 0);
+            })
+        </script>
+          <div class="contact" id="contact">
+            <div class="left-box"></div>
+            <div class="center-box" id="form">
+                <h1>Contact Us</h1>
+                <br>
+                <h3>if ou want to contact us just fill next strokes</h3>
+                <div class="inputrow">
+              <form   action="https://formspree.io/f/mjvlwqla"
+  method="POST" id="my-form">
+                    <input type="text" name="name" placeholder="name" id="name" required>
+                    <input type="email" name="email" placeholder="elonmusk@tesla.com" id="email" required>
+                    <input type="text" name="subject" placeholder="subject" id="subject" required>
+                    <input type="text" name="message" placeholder="your message" id="message" required>
+                    <button id="send" class="send" type="submit">send</button>
+<div id="statusq">
+  <p id="status">
+  </div>
+                  </form>
+                </div>
+            </div>
+            <div class="right-box"></div>
+            <div id="blackbox">
+                <h2>Info</h1>
+                <p><br><br>hello!<br><br>contact us if you have questions.<br><br>by contacting us you are allowing us to send you reply message via email.
+                dont be scared dude, we are not hackers and we aren't going to hack/kill or discomfort you!</p>
+            </div>
+        </div>
+  <style>
+  @media only screen and (max-width: 800px) {
+  .contact {
+    font-size: small;
+  }
+  #blackbox {
+    visibility: hidden;
+  }
+  input {
+    width: 200px;
+  }
+  .right-box {
+    visibility: hidden;
+    flex-basis: 0%;
+  }
+  .left-box {
+    display: none;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  #blackbox {
+    visibility: hidden;
+  }
+}
+.contact h1 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 40px;
+}
+.contact h2 {
+  font-size: 30px;
+}
+.contact h3 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+}
+input {
+  width: 60%;
+  border: none;
+  border-bottom: 1px solid gold;
+  justify-content: space-between;
+  flex-basis: 40%;
+  outline: none;
+  padding: 20px;
+}
+#send {
+  width: 60%;
+  border: none;
+  background-color: #000000;
+  color: #ffffff;
+  text-align: center;
+  padding: 10px;
+  margin-top: 5%;
+  transition: 3s ease;
+}
+#send:hover {
+  color: gold;
+  background-color: #ffffff;
+  outline: gold;
+  border: 1px solid gold;
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+}
+.contact {
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  width: 80%;
+  margin: auto;
+  margin-top: 150px;
+  padding: 30px 30px 30px 30px;
+  box-shadow: 30px 30px 30px #130001;
+  position: relative;
+}
+.left-box {
+  flex-basis: 5%;
+}
+.center-box {
+  margin-top: auto;
+  margin-bottom: 60px;
+  padding: 40px 60px;
+  background-color: #ffffff;
+  flex-basis: 75%;
+  display: block;
+}
+.right-box {
+  flex-basis: 20%;
+  background-color: gold;
+}
+#blackbox {
+  width: 40%;
+  height: 70%;
+  color: #ffffff;
+  background-color: #000000;
+  position: absolute;
+  right: 0;
+  bottom: 15%;
+  padding: 30px;
+  margin: auto;
+  font-family: "Montserrat", sans-serif;
+}
+#status {
+  width: 60%;
+  outline: none;
+  border-radius: 30px;
+  border: green;
+  background: yellow;
+  color: white;
+  font-family: "Monsterrat", sans-serif;
+  padding: 20px;
+  margin-top: 2%;
+  justify-content: center;
+  text-align: center;
+  transition: 3s ease ;
+  display: none;
+}
+    @keyframes status {
+      0% {
+        opacity: 1;
+        pointer-events: all;
+      }
+      10% {
+        opacity: 0.9;
+        pointer-events: all;
+      }
+      20% {
+        opacity: 0.8;
+        pointer-events: all;
+      }
+      30% {
+        opacity: 0.7;
+        pointer-events: all;
+      }
+      40% {
+        opacity: 0.6;
+        pointer-events: none;
+      }
+      50% {
+        opacity: 0.5;
+        pointer-events: none;
+      }
+      60% {
+        opacity: 0.4;
+        pointer-events: none;
+      }
+      70% {
+        opacity: 0.3;
+        pointer-events: none;
+      }
+      80% {
+        opacity: 0.2;
+        pointer-events: none;
+      }
+      90% {
+        opacity: 0.1;
+        pointer-events: none;
+      }
+      100% {
+        opacity: 0;
+        pointer-events: none;
+      }
+    }
+#status #fail {
+  width: 60%;
+  outline: none;
+  border-radius: 30px;
+  border: red;
+  background: red;
+  color: white;
+  font-family: "Monsterrat", sans-serif;
+  padding: 20px;
+  margin-top: 2%;
+  justify-content: center;
+  text-align: center;
+  transition: all 0.6 ease 3;
+  display: flex;
+}
+</style>
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+  <script>
+    var form = document.getElementById("my-form");
+    
+    async function handleSubmit(event) {
+      event.preventDefault();
+      var status = document.getElementById("status");
+      var button = document.getElementById("send");
+      var data = new FormData(event.target);
+      fetch(event.target.action, {
+        method: form.method,
+        body: data,
+        headers: {
+            'Accept': 'application/json'
+        }
+      }).then(response => {
+        if (response.ok) {
+          status.innerHTML = "Thanks for your submission!";
+          status.style.display = "flex";
+          button.style.display = "none";
+          form.reset()
+        } else {
+          response.json().then(data => {
+            if (Object.hasOwn(data, 'errors')) {
+              status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
+            } else {
+              status.innerHTML = "Oops! There was a problem submitting your form"
+            }
+          })
+        }
+      }).catch(error => {
+        status.innerHTML = "Oops! There was a problem submitting your form"
+      });
+    }
+    form.addEventListener("submit", handleSubmit)
+</script>
+</body>
+</html>

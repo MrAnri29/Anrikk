@@ -1,13 +1,6 @@
-const doc = document;
-const menuOpen = doc.querySelector(".menu");
-const menuClose = doc.querySelector(".close");
-const overlay = doc.querySelector(".overlay");
+let wassup = document.getElementById('welcometoesta')
 
-menuOpen.addEventListener("click", () => {
-  overlay.classList.add("overlay--active");
-});
-
-menuClose.addEventListener("click", () => {
-  overlay.classList.remove("overlay--active");
-});
-
+window.addEventListener('scroll', function(){
+  let value = window.scrollY;
+  wassup.style.marginLeft = value + 'px';
+})
