@@ -13,11 +13,11 @@
 </head>
 <body>
           <header class>
-            <a class="logo" href="https://discord.gg/R3Jwg8Fpmk">Esta</a>
+            <a class="logo" href="/index.html">Esta</a>
                 <ul class="nav__links">
-                    <li><a href="#" class="active">Home</a></li>
-                    <li><a href="#">Projects</a></li>
-                    <li><a href="contactustest.html">About</a></li>
+                    <li><a href="/index.html" class="active" id="active">Home</a></li>
+                    <li><a href="/index.html">Projects</a></li>
+                    <li><a href="/index.html">About</a></li>
                     <li><a href="contactus.html">contact</a></li>
                 </ul>
         </header>
@@ -28,22 +28,20 @@
             })
         </script>
           <div class="contact" id="contact">
-            <div class="left-box"></div>
             <div class="center-box" id="form">
                 <h1>Contact Us</h1>
                 <br>
                 <h3>if ou want to contact us just fill next strokes</h3>
                 <div class="inputrow">
-              <form   action="https://formspree.io/f/mjvlwqla"
-  method="POST" id="my-form">
-                    <input type="text" name="name" placeholder="name" id="name" required>
-                    <input type="email" name="email" placeholder="elonmusk@tesla.com" id="email" required>
-                    <input type="text" name="subject" placeholder="subject" id="subject" required>
-                    <input type="text" name="message" placeholder="your message" id="message" required>
+              <form action="https://formspree.io/f/mjvlwqla" method="POST" id="my-form">
+                    <input type="text" name="name" placeholder="name: eren jager" id="name" required>
+                    <input type="email" name="email" placeholder="email: elonmusk@tesla.com" id="email" required>
+                    <input type="text" name="subject" placeholder="subject: ww3" id="subject" required>
+                    <input type="text" name="message" placeholder="your message: putin xuilo!" id="message" required>
                     <button id="send" class="send" type="submit">send</button>
-<div id="statusq">
-  <p id="status">
-  </div>
+                    <div id="statusq">
+                      <p id="status">
+                      </div>
                   </form>
                 </div>
             </div>
@@ -60,14 +58,16 @@
     font-size: small;
   }
   #blackbox {
-    visibility: hidden;
+    display: none;
   }
   input {
-    width: 200px;
+    width: 100%;
+  }
+  .center-box {
+    flex-basis: 100%;
   }
   .right-box {
-    visibility: hidden;
-    flex-basis: 0%;
+    display: none;
   }
   .left-box {
     display: none;
@@ -75,7 +75,13 @@
 }
 @media only screen and (max-width: 1000px) {
   #blackbox {
-    visibility: hidden;
+    display: none;
+  }
+  .right-box {
+    display: none;
+  }
+  .left-box {
+    display: none;
   }
 }
 .contact h1 {
@@ -123,11 +129,9 @@ input {
   margin: auto;
   margin-top: 150px;
   padding: 30px 30px 30px 30px;
-  box-shadow: 30px 30px 30px #130001;
+  box-shadow: 30px 30px 30px #8a5a00;
   position: relative;
-}
-.left-box {
-  flex-basis: 5%;
+  margin-bottom: 150px;
 }
 .center-box {
   margin-top: auto;
@@ -168,7 +172,7 @@ input {
   transition: 3s ease ;
   display: none;
 }
-    @keyframes status {
+@keyframes status {
       0% {
         opacity: 1;
         pointer-events: all;
@@ -213,21 +217,9 @@ input {
         opacity: 0;
         pointer-events: none;
       }
-    }
-#status #fail {
-  width: 60%;
-  outline: none;
-  border-radius: 30px;
-  border: red;
-  background: red;
-  color: white;
-  font-family: "Monsterrat", sans-serif;
-  padding: 20px;
-  margin-top: 2%;
-  justify-content: center;
-  text-align: center;
-  transition: all 0.6 ease 3;
-  display: flex;
+}
+Body {
+  background-color: goldenrod;
 }
 </style>
 <script src="https://smtpjs.com/v3/smtp.js"></script>
@@ -248,6 +240,9 @@ input {
       }).then(response => {
         if (response.ok) {
           status.innerHTML = "Thanks for your submission!";
+          window.setTimeout(function () {
+          window.location.reload();
+          }, 2500);
           status.style.display = "flex";
           button.style.display = "none";
           form.reset()
