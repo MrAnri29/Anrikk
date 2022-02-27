@@ -1,13 +1,18 @@
-Body{
-  background-color: rgba(32,0,1,255);
-  position: relative;
-  overflow-x: hidden;
-}
+/* Body/*\/html */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
+Body{
+  background-color: rgba(32,0,1,255);
+  position: relative;
+  overflow-x: hidden;
+}
+html {
+  scroll-behavior: smooth;
+}
+/* header active/sticky */
 header {
   position: fixed;
   top: 0;
@@ -48,6 +53,7 @@ header.sticky ul li a {
   color: #000000;
   outline: none;
 }
+/* header inactive */
 header .logo {
   position: relative;
   font-weight: 700;
@@ -125,6 +131,7 @@ header ul li a:hover:after {
   visibility: visible;
   height: 100%;
 }
+/* start background/banner/welcomemsg */
 .banner {
   position: relative;
   width: 100%;
@@ -166,6 +173,7 @@ header ul li a:hover:after {
     display: none;
   }
 }
+/* lorem ipsum */
 .emptyspace {
   font-family: "Monsterrat", sans-serif;
   color: white;
@@ -178,6 +186,7 @@ header ul li a:hover:after {
 .emptyspace p {
   margin-top: auto;
 }
+/* end of the site */
 .end {
   font-family: "Monsterrat", sans-serif;
   width: 100%;
@@ -204,9 +213,6 @@ header ul li a:hover:after {
   position: relative;
   font-family: 'Dosis', sans-serif;
 }
-#tothetop:hover {
-  color: goldenrod;
-}
 /*effect-underline*/
 #tothetop:after {
 	content: '';
@@ -223,12 +229,11 @@ header ul li a:hover:after {
 	-webkit-transform: scale(0,1);
 	transform: scale(0,1);
 }
-
+#tothetop:hover {
+  color: goldenrod;
+}
 #tothetop:hover:after {
   opacity: 1;
 	-webkit-transform: scale(1);
 	transform: scale(1);
-}
-html {
-  scroll-behavior: smooth;
 }
