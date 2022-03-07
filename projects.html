@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>projects</title>
+    <link rel="stylesheet" href="aprojectsstyle.css">
+    <link rel="shortcut icon" href="https://cdn.discordapp.com/sicons/923208544231243807/39e31b500a6de3f5c16b3382391fa3fc.webp?size=1024">
+    <style>
+        * {
+    font-family: "Poopins", sans-serif;
+}
+Body {
+    position: relative;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    background-color: #00D1D1;
+}
+.container {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: center;
+}
+.container .lorem {
+    margin-top: 250vh;
+    align-items: center;
+    position: absolute;
+    width: 80%;
+    color: white;
+    height: 20vh;
+}
+h2 {
+    position: relative;
+    color: white;
+    text-align: center;
+    font-size: 12vw;
+    line-height: 0.6em;
+    font-weight: 900;
+    z-index: 1000;
+}
+h2 span {
+    font-size: 0.2em;
+    letter-spacing: 0.4em;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+.block {
+    position: absolute;
+    width: 50px;
+    height: 100px;
+    background: #00D1D1;
+    box-shadow: 10px 10px 50px #00A3A3;
+    opacity: 0;
+}
+/* header active/sticky */
+header {
+position: fixed;
+top: 0;
+left: 0;
+width: 88%;
+display: flex;
+justify-content: space-between;
+align-items: center;
+transition: 0.6s;
+padding: 40px 100px;
+font-family: "Monsterrat", sans-serif;
+z-index: 10000;
+overflow: hidden;
+}
+header.sticky {
+    transition: none;
+}
+header.sticky ul:hover li:hover a:hover {
+color: #00A3A3;
+border: 1px solid #00A3A3;
+border-radius: 30px;
+background-color: #00D1D1;
+outline: none;
+padding: 15px 18px;
+}
+header.sticky ul li a::after {
+visibility: hidden;
+display: none;
+color: #fbff00;
+transition: none;
+display: none;
+}
+header.sticky {
+padding: 5px 100px;
+background-color: #00D1D1;
+color: #fbff00;
+position: fixed;
+transition: 0.6s;
+}
+header.sticky .logo,
+header.sticky ul li a {
+color: #fffffffa;
+text-shadow: 5px 5px 5px #00797960;
+outline: none;
+}
+/* header inactive */
+header .logo {
+position: relative;
+font-weight: 700;
+color: #ffffff;
+text-decoration: none;
+font-size: 3em;
+text-transform: uppercase;
+letter-spacing: 2px;
+transition: 0.6s;
+}
+@media screen and (max-width: 800px) {
+header :not(#active1, ul, li, .logo) {
+    display: none;
+}
+}
+header ul {
+position: relative;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+header ul {
+list-style: none;
+text-align: center;
+}
+header ul li {
+display: inline-block;
+}
+header ul li a {
+display: block;
+padding: 15px;
+text-decoration: none;
+color: rgb(255, 255, 255);
+font-weight: 500px;
+font-family: "Monsterrat",sans-serif;
+text-transform: uppercase;
+margin: 0 10px;
+letter-spacing: 2px;
+outline: none;
+}
+header ul li a,
+header ul li a:after,
+header ul li a:before {
+transition: ease 0.5s;
+}
+header ul li a:hover {
+color: rgb(255, 255, 255);
+}
+header ul li a {
+position:relative;
+z-index: 1;
+}
+header ul li a:hover {
+color: #fff8eb;
+}
+header ul li a:after {
+display: inline-block;
+position: absolute;
+top: 0;
+left: 0;
+bottom: 0;
+right: 0;
+margin: auto;
+width: 100%;
+height: 1px;
+content: '.';
+color: transparent;
+background: #007575;
+visibility: none;
+opacity: 0;
+z-index: -1;
+}
+header ul li a:hover:after {
+opacity: 1;
+visibility: visible;
+height: 100%;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10em;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #007575;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background: #00D1D1;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #00A3A3;
+}
+.lorems {
+    position: relative;
+    margin-top: 150vh;
+    color: white;
+    width: 80%;
+    margin: center;
+    align-items: center;
+}
+footer {
+    margin-top: 200vh;
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    display: flex;
+    margin: center;
+    align-items: center;
+    justify-content: center;
+    padding: 300px 0 200px;
+}
+footer a {
+    text-decoration: none;
+    color: white;
+    font-weight: 100;
+    background: none;
+    transition: 0.5s;
+}
+footer a:hover {
+    color: purple;
+}
+    </style>
+</head>
+<body>
+
+    <header class id="sticky">
+        <a class="logo" href="/index.html">Esta</a>
+            <ul class="nav__links">
+                <li><a href="/index.html" class="active" id="active1">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contactus.html">About</a></li>
+                <li><a href="contactus.html">contact</a></li>
+            </ul>
+    </header>
+
+    <div class="container">
+        <h2><span>My projects</span><br>Discord.js</h2>
+        <br>
+        <div class="lorem"></div>
+    </div>
+
+    <p class="lorems">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum fuga ad dolores sunt, distinctio ullam. 
+        Omnis porro ducimus laboriosam veritatis, delectus, 
+        impedit reprehenderit corrupti eligendi vitae vero quaerat dolorumLorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Rerum fuga ad dolores sunt, distinctio ullam. 
+        Omnis porro ducimus laboriosam veritatis, delectus, 
+        impedit reprehenderit corrupti eligendi vitae vero quaerat dolorumLorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Rerum fuga ad dolores sunt, distinctio ullam. 
+        Omnis porro ducimus laboriosam veritatis, delectus, 
+        impedit reprehenderit corrupti eligendi vitae vero quaerat dolorumLorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Rerum fuga ad dolores sunt, distinctio ullam. 
+        Omnis porro ducimus laboriosam veritatis, delectus, 
+        impedit reprehenderit corrupti eligendi vitae vero quaerat dolorumLorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Rerum fuga ad dolores sunt, distinctio ullam. 
+        Omnis porro ducimus laboriosam veritatis, delectus, 
+        impedit reprehenderit corrupti eligendi vitae vero quaerat dolorumLorem ipsum dolor sit amet consectetur adipisicing elit. Rerum fuga ad dolores sunt, distinctio ullam. 
+        Omnis porro ducimus laboriosam veritatis, delectus, 
+        impedit reprehenderit corrupti eligendi vitae vero quaerat dolorumLorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Rerum fuga ad dolores sunt, distinctio ullam. 
+        Omnis porro ducimus laboriosam veritatis, delectus, 
+        impedit reprehenderit corrupti eligendi vitae vero quaerat dolorumLorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Rerum fuga ad dolores sunt, distinctio ullam. 
+        Omnis porro ducimus laboriosam veritatis, delectus, 
+        impedit reprehenderit corrupti eligendi vitae vero quaerat dolorumLorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Rerum fuga ad dolores sunt, distinctio ullam. 
+        Omnis porro ducimus laboriosam veritatis, delectus, 
+        impedit reprehenderit corrupti eligendi vitae vero quaerat dolorumLorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Rerum fuga ad dolores sunt, distinctio ullam. 
+        Omnis porro ducimus laboriosam veritatis, delectus, 
+        impedit reprehenderit corrupti eligendi vitae vero quaerat dolorumLorem ipsum dolor sit amet consectetur adipisicing elit. Rerum fuga ad dolores sunt, distinctio ullam. 
+        Omnis porro ducimus laboriosam veritatis, delectus, 
+        impedit reprehenderit corrupti eligendi vitae vero quaerat dolorumLorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Rerum fuga ad dolores sunt, distinctio ullam. 
+        Omnis porro ducimus laboriosam veritatis, delectus, 
+        impedit reprehenderit corrupti eligendi vitae vero quaerat dolorumLorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Rerum fuga ad dolores sunt, distinctio ullam. 
+        Omnis porro ducimus laboriosam veritatis, delectus, 
+        impedit reprehenderit corrupti eligendi vitae vero quaerat dolorumLorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Rerum fuga ad dolores sunt, distinctio ullam. 
+        Omnis porro ducimus laboriosam veritatis, delectus, 
+        impedit reprehenderit corrupti eligendi vitae vero quaerat dolorumLorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Rerum fuga ad dolores sunt, distinctio ullam. 
+        Omnis porro ducimus laboriosam veritatis, delectus, 
+        impedit reprehenderit corrupti eligendi vitae vero quaerat dolorumLorem ipsum dolor sit amet consectetur adipisicing elit. Rerum fuga ad dolores sunt, distinctio ullam. 
+        Omnis porro ducimus laboriosam veritatis, delectus, 
+        impedit reprehenderit corrupti eligendi vitae vero quaerat dolorumLorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Rerum fuga ad dolores sunt, distinctio ullam. 
+        Omnis porro ducimus laboriosam veritatis, delectus, 
+        impedit reprehenderit corrupti eligendi vitae vero quaerat dolorumLorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Rerum fuga ad dolores sunt, distinctio ullam. 
+        Omnis porro ducimus laboriosam veritatis, delectus, 
+        impedit reprehenderit corrupti eligendi vitae vero quaerat dolorumLorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Rerum fuga ad dolores sunt, distinctio ullam. 
+        Omnis porro ducimus laboriosam veritatis, delectus, 
+        impedit reprehenderit corrupti eligendi vitae vero quaerat dolorumLorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Rerum fuga ad dolores sunt, distinctio ullam. 
+        Omnis porro ducimus laboriosam veritatis, delectus, 
+        impedit reprehenderit corrupti eligendi vitae vero quaerat dolorum</p>
+
+        <footer>  
+            @Copyright <a href="https://github.com/MrAnri29" target="_blank"> &nbsp; MrAnri29 &nbsp; </a> 2020- All Right Reserved.   
+            </footer>  
+
+    <script src="anime.min.js"></script>
+    <script>
+        const continer = document.querySelector('.container')
+        for (var i = 0; i <= 100; i++){
+            const blocks = document.createElement('div');
+            blocks.classList.add('block');
+            continer.appendChild(blocks);
+            blocks.style.opacity = "1";
+        }
+
+        function animateBlocks(){
+            anime({
+                targets: '.block',
+                translateY: function(){
+                    return anime.random(-400, 400);
+                },
+                translateX: function(){
+                    return anime.random(-700, 700);
+                },
+                scale: function(){
+                    return anime.random(1,5);
+                },
+
+                easing: 'linear',
+                duration: 3000,
+                delay: anime.stagger(10)
+            })
+        }
+        animateBlocks()
+        window.addEventListener("scroll", function(){
+                var header = document.querySelector("header");
+                header.classList.toggle("sticky", window.scrollY > 0);
+            })
+    </script>
+</body>
+</html>

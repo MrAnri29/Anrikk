@@ -136,7 +136,7 @@ header ul li a:hover:after {
   position: relative;
   width: 100%;
   height: 100vh;
-  background: url(images/wallpaper.jpg);
+  background: url(https://cdn.discordapp.com/attachments/847393025767505928/950408768896782406/wallpaper.jpg);
   background-size: cover;
   z-index: 10;
 }
@@ -238,4 +238,24 @@ header ul li a:hover:after {
   opacity: 1;
 	-webkit-transform: scale(1);
 	transform: scale(1);
+}
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10em;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background-color: rgba(32,0,1,255);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: goldenrod;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
