@@ -5,8 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>projects</title>
-    <link rel="stylesheet" href="aprojectsstyle.css">
-    <link rel="shortcut icon" href="https://cdn.discordapp.com/sicons/923208544231243807/39e31b500a6de3f5c16b3382391fa3fc.webp?size=1024">
+    <link rel="shortcut icon" href="https://cdn.discordapp.com/icons/923208544231243807/39e31b500a6de3f5c16b3382391fa3fc.webp?size=1024">
     <style>
         * {
     font-family: "Poopins", sans-serif;
@@ -78,12 +77,11 @@ header.sticky {
     transition: none;
 }
 header.sticky ul:hover li:hover a:hover {
-color: #00A3A3;
-border: 1px solid #00A3A3;
-border-radius: 30px;
-background-color: #00D1D1;
-outline: none;
-padding: 15px 18px;
+    color: #00D1D1;
+    padding: 15px 18px;
+    transition: 0.5s;
+    transform: scale(1.1);
+    font-weight: 500;
 }
 header.sticky ul li a::after {
 visibility: hidden;
@@ -94,7 +92,7 @@ display: none;
 }
 header.sticky {
 padding: 5px 100px;
-background-color: #00D1D1;
+background-color: darkcyan;
 color: #fbff00;
 position: fixed;
 transition: 0.6s;
@@ -192,19 +190,21 @@ height: 100%;
 
 /* Track */
 ::-webkit-scrollbar-track {
-    background: #007575;
+    background: none;
+    border-radius: 5px;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
     border-radius: 5px;
-    background: #00D1D1;
+    background: #007575;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
     background: #00A3A3;
 }
+
 .lorems {
     position: relative;
     margin-top: 150vh;
@@ -214,7 +214,7 @@ height: 100%;
     align-items: center;
 }
 footer {
-    margin-top: 200vh;
+    margin-top: 350vh;
     width: 100%;
     height: 100px;
     position: absolute;
@@ -232,7 +232,7 @@ footer a {
     transition: 0.5s;
 }
 footer a:hover {
-    color: purple;
+    color: darkcyan;
 }
     </style>
 </head>
@@ -311,12 +311,186 @@ footer a:hover {
         Rerum fuga ad dolores sunt, distinctio ullam. 
         Omnis porro ducimus laboriosam veritatis, delectus, 
         impedit reprehenderit corrupti eligendi vitae vero quaerat dolorum</p>
+<div class="cards">
+    <style>
+        .cards {
+            margin-top: 230vh;
+            position: absolute;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 100px;
+            background-color: #27c2c2;
+            box-shadow: 35px 0px 35px 35px#23a0a0;
+        }
+        .card1 {
+            display: grid;
+            grid-template-columns: 250px;
+            grid-template-rows: 160px 160px 30px;
+            grid-template-areas: "image" "text";
+
+            font-family: "roboto", sans-serif;
+            border-radius: 18px;
+            background: white;
+            box-shadow: 5px 5px 15px#1b7777;
+            text-align: center;
+
+            transition: 0.5s ease;
+            cursor: pointer;
+        }
+        .card-image1 {
+            grid-area: image;
+            background: url(https://cdn.discordapp.com/avatars/934095418353135718/dc2b30c625a59de17190e0fcce3eaaa4.png?size=4096);
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+            background-size: cover;
+        }
+        .card-text1 {
+            grid-area: text;
+            margin: 25px;
+        }
+        .card-text1 p {
+            color: gray;
+            font-size: 15px;
+            font-weight: 300;
+            transition: 0.5s;
+        }
+        .card1 h2 {
+            margin-top: 0px;
+            font-size: 20px;
+            color: black;
+            transition: 0.5s;
+        }
+        .card1:hover {
+            transform: scale(1.2);
+            box-shadow: 5px 5px 15px#1b7777;
+        }
+        .card2 {
+            display: grid;
+            grid-template-columns: 280px;
+            grid-template-rows: 180px 180px 60px;
+            grid-template-areas: "image" "text";
+
+            font-family: "roboto", sans-serif;
+            border-radius: 18px;
+            background: white;
+            box-shadow: 5px 5px 15px#1b7777;
+            text-align: center;
+
+            transition: 0.5s ease;
+            cursor: pointer;
+
+        }
+        .card-image2 {
+            grid-area: image;
+            background: url(https://cdn.discordapp.com/avatars/930847274370744361/f451209d5127e395cd2bf85f6a4666c0.png?size=4096);
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+            background-size: cover;
+        }
+        .card-text2 {
+            grid-area: text;
+            margin: 25px;
+        }
+        .card-text2 p {
+            color: gray;
+            font-size: 15px;
+            font-weight: 300;
+            transition: 0.5s;
+        }
+        .card2 h2 {
+            margin-top: 0px;
+            font-size: 28px;
+            color: black;
+            transition: 0.5s;
+        }
+        .card2:hover {
+            transform: scale(1.2);
+            box-shadow: 5px 5px 15px#1b7777;
+        }
+        .card3 {
+            display: grid;
+            grid-template-columns: 250px;
+            grid-template-rows: 160px 160px 30px;
+            grid-template-areas: "image" "text";
+
+            font-family: "roboto", sans-serif;
+            border-radius: 18px;
+            background: white;
+            box-shadow: 5px 5px 15px#1b7777;
+            text-align: center;
+
+            transition: 0.5s ease;
+            cursor: pointer;
+
+        }
+        .card-image3 {
+            grid-area: image;
+            background: url(https://cdn.discordapp.com/avatars/929419146058420255/6f625ce35f90ce59b790c5cc51e72924.png?size=4096);
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+            background-size: cover;
+        }
+        .card-text3 {
+            grid-area: text;
+            margin: 25px;
+        }
+        .card-text3 p {
+            color: gray;
+            font-size: 15px;
+            font-weight: 300;
+            transition: 0.5s;
+        }
+        .card3 h2 {
+            margin-top: 0px;
+            font-size: 20px;
+            color: black;
+            transition: 0.5s;
+        }
+        .card3:hover {
+            transform: scale(1.2);
+            box-shadow: 5px 5px 15px#1b7777;
+        }
+        .cards h2:hover {
+            transform: scale(1.1);
+            color: #00D1D1;
+        }
+        .cards p:hover {
+            transform: scale(1.05);
+            color: #27c2c2;
+        }
+        </style>
+    <div class="card1">
+        <div class="card-image1"></div>
+        <div class="card-text1">
+        <h2>Esta music</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic, quaerat id voluptatem soluta excepturi quod unde minus dolore animi aut doloremque.</p>
+    </div>
+</div>
+    <div class="card2">
+        <div class="card-image2"></div>
+        <div class="card-text2">
+        <h2>Esta mod</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic, quaerat id voluptatem soluta excepturi quod unde minus dolore animi aut doloremque.</p>
+    </div>
+    </div>
+       <div class="card3">
+           <div class="card-image3"><a href="#"></div>
+           <div class="card-text3">
+           <a href="#" style="text-decoration: none;" id="cardhref"><h2>GGC giveaways</h2>
+           <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic, quaerat id voluptatem soluta excepturi quod unde minus dolore animi aut doloremque.</p>
+        </a>
+       </div>
+    </div>
+</div>
 
         <footer>  
-            @Copyright <a href="https://github.com/MrAnri29" target="_blank"> &nbsp; MrAnri29 &nbsp; </a> 2020- All Right Reserved.   
+            © 2022- All Right Reserved.<a href="https://github.com/MrAnri29" target="_blank"> &nbsp; MrAnri29 &nbsp; </a>   
             </footer>  
 
-    <script src="anime.min.js"></script>
+    <script src="/JS/anime.min.js"></script>
     <script>
         const continer = document.querySelector('.container')
         for (var i = 0; i <= 100; i++){
