@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+  height: 300vh;
+  background-color: black;
+}
+html {
+  scroll-behavior: smooth;
+}
+/* header active/sticky */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.6s;
+  padding: 40px 100px;
+  font-family: "Monsterrat", sans-serif;
+  z-index: 10000;
+}
+header.sticky ul:hover li:hover a:hover {
+  color: #00FF00;
+  border: 1px solid #00FF00;
+  border-radius: 30px;
+  background-color: none;
+  outline: #00FF00;
+  padding: 10px 18px;
+}
+header.sticky ul li a::after {
+  display: none;
+  color: #00FF00;
+}
+header.sticky {
+  padding: 5px 100px;
+  background-color: none;
+  color: #00FF00;
+  position: fixed;
+  transition: 0.6s;
+}
+header.sticky .logo,
+header.sticky ul li a {
+  color: #00FF00;
+  outline: none;
+}
+/* header inactive */
+header .logo {
+  position: relative;
+  font-weight: 700;
+  color: #00FF00;
+  text-decoration: none;
+  font-size: 3em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: 0.6s;
+}
+@media screen and (max-width: 800px) {
+  header :not(#active1, ul, li, .logo) {
+    display: none;
+  }
+}
+header ul {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header ul {
+  list-style: none;
+  text-align: center;
+}
+header ul li {
+  display: inline-block;
+}
+header ul li a {
+  display: block;
+  padding: 15px;
+  text-decoration: none;
+  color: #00FF00;
+  font-weight: 500px;
+  font-family: "Monsterrat",sans-serif;
+  text-transform: uppercase;
+  margin: 0 10px;
+  letter-spacing: 2px;
+  outline: none;
+}
+header ul li a,
+header ul li a:after,
+header ul li a:before {
+  transition: ease 0.5s;
+}
+header ul li a {
+  position: relative;
+  z-index: 1;
+}
+header ul li a:hover {
+  color: green;
+}
+header ul li a:after {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  width: 100%;
+  height: 1px;
+  content: '';
+  color: transparent;
+  background: #00FF00;
+  visibility: none;
+  opacity: 0;
+  z-index: -1;
+}
+header ul li a:hover:after {
+  opacity: 1;
+  visibility: visible;
+  height: 100%;
+}
+/* particles */
+#particles-js {
+    min-width: 100%;
+    height: 110vh;
+}
+.wlctxt {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  margin-top: 17%;
+  margin-left: 40%;
+  position: absolute;
+  flex-direction: column;
+  color: #008500;
+}
+.wlctxt h1 {
+  font-family: "Poopins", sans-serif;
+  font-size: 17vw;
+}
+.wlctxt p {
+  font-size: 3vw;
+  font-family: "roboto", sans-serif;
+  margin-left: 28%;
+}
+.lorem p {
+  color: #00FF00;
+  width: 80%;
+  margin: auto;
+  font-family: "Monsterrat", sans-serif;
+  margin-top: 5%;
+}
