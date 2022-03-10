@@ -163,11 +163,13 @@ header ul li a:hover:after {
 /* Track */
 ::-webkit-scrollbar-track {
   background-color: #242323;
+  border-radius: 5px;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
   background: #00FF00;
+  border-radius: 5px;
 }
 
 /* Handle on hover */
