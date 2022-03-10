@@ -154,3 +154,23 @@ header ul li a:hover:after {
   font-family: "Monsterrat", sans-serif;
   margin-top: 5%;
 }
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10em;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background-color: #242323;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #00FF00;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #008500;
+}

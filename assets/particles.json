@@ -1,7 +1,7 @@
 {
   "particles": {
     "number": {
-      "value": 50,
+      "value": 55,
       "density": {
         "enable": true,
         "value_area": 800
@@ -63,7 +63,7 @@
     "detect_on": "canvas",
     "events": {
       "onhover": {
-        "enable": false,
+        "enable": true,
         "mode": "repulse"
       },
       "onclick": {
@@ -78,6 +78,9 @@
         "line_linked": {
           "opacity": 1
         }
+      },
+      "repulse":{
+        "distance": 50
       }
     }
   },
