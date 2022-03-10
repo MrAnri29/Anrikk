@@ -136,7 +136,7 @@ header ul li a:hover:after {
   position: relative;
   width: 100%;
   height: 100vh;
-  background: url(https://cdn.discordapp.com/attachments/847393025767505928/950408768896782406/wallpaper.jpg);
+  background: url(/images/wallpaper.jpg);
   background-size: cover;
   z-index: 10;
 }
