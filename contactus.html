@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>contact us!</title>
-        <link rel="shortcut icon" href="https://cdn.discordapp.com/icons/923208544231243807/39e31b500a6de3f5c16b3382391fa3fc.webp?size=1024">
+  <title>contact me!</title>
+        <link rel="shortcut icon" href="">
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="/CSS/styles.css">
@@ -13,7 +13,7 @@
 </head>
 <body>
           <header class>
-            <a class="logo" href="index.html">Esta</a>
+            <a class="logo" href="index.html">anri</a>
                 <ul class="nav__links">
                     <li><a href="index.html" class="active" id="active">Home</a></li>
                     <li><a href="projects.html">Projects</a></li>
@@ -29,15 +29,19 @@
         </script>
           <div class="contact" id="contact">
             <div class="center-box" id="form">
-                <h1>Contact Us</h1>
+                <h1>Contact ME</h1>
                 <br>
-                <h3>if ou want to contact us just fill next strokes</h3>
+                <h3>if you want to contact me just fill next strokes</h3>
                 <div class="inputrow">
-              <form action="https://formspree.io/f/mjvlwqla" method="POST" id="my-form">
-                    <input type="text" name="name" placeholder="name: eren jager" id="name" required>
+              <form action="https://formsubmit.co/mr.anriko29@gmail.com" method="POST" id="my-form">
+                    <input type="hidden" name="_next" value="https://anrivachnadze.netlify.app/contactus">
+                    <input type="hidden" name="_subject" value="Someone contacted you with your portfolio!">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="text" name="name" placeholder="name: Elon Musk" id="name" required>
                     <input type="email" name="email" placeholder="email: elonmusk@tesla.com" id="email" required>
-                    <input type="text" name="subject" placeholder="subject: ww3" id="subject" required>
-                    <input type="text" name="message" placeholder="your message: putin xuilo!" id="message" required>
+                    <input type="text" name="subject" placeholder="subject: Job application" id="subject" required>
+                    <input type="text" name="message" placeholder="Your msg: Congratulations! You are our staff member now!" id="message" required>
                     <button id="send" class="send" type="submit">send</button>
                     <div id="statusq">
                       <p id="status">
@@ -48,8 +52,8 @@
             <div class="right-box"></div>
             <div id="blackbox">
                 <h2>Info</h1>
-                <p><br><br>hello!<br><br>contact us if you have questions.<br><br>by contacting us you are allowing us to send you reply message via email.
-                dont be scared dude, we are not hackers and we aren't going to hack/kill or discomfort you!</p>
+                <p><br><br>hello!<br><br>contact me if you have any questions or want to take me as your emplyee.<br><br>by contacting me you are allowing me to send you reply message via email.
+                Don't be scared dude, I am not hacker and I am not going to hack or harm you darling.</p>
             </div>
         </div>
   <style>
@@ -222,44 +226,5 @@ Body {
   background-color: goldenrod;
 }
 </style>
-<script src="https://smtpjs.com/v3/smtp.js"></script>
-  <script>
-    var form = document.getElementById("my-form");
-    
-    async function handleSubmit(event) {
-      event.preventDefault();
-      var status = document.getElementById("status");
-      var button = document.getElementById("send");
-      var data = new FormData(event.target);
-      fetch(event.target.action, {
-        method: form.method,
-        body: data,
-        headers: {
-            'Accept': 'application/json'
-        }
-      }).then(response => {
-        if (response.ok) {
-          status.innerHTML = "Thanks for your submission!";
-          window.setTimeout(function () {
-          window.location.reload();
-          }, 2500);
-          status.style.display = "flex";
-          button.style.display = "none";
-          form.reset()
-        } else {
-          response.json().then(data => {
-            if (Object.hasOwn(data, 'errors')) {
-              status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
-            } else {
-              status.innerHTML = "Oops! There was a problem submitting your form"
-            }
-          })
-        }
-      }).catch(error => {
-        status.innerHTML = "Oops! There was a problem submitting your form"
-      });
-    }
-    form.addEventListener("submit", handleSubmit)
-</script>
 </body>
 </html>

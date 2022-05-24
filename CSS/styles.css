@@ -186,6 +186,10 @@ header ul li a:hover:after {
 .emptyspace p {
   margin-top: auto;
 }
+
+#explanation {
+  color: #555555;
+}
 /* end of the site */
 .end {
   font-family: "Monsterrat", sans-serif;
