@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,245 +9,273 @@
     <link rel="shortcut icon" href="">
     <style>
         * {
-    font-family: "Poopins", sans-serif;
-    box-sizing: border-box;
-}
-Body {
-    position: relative;
-    overflow-x: hidden;
-    display: flex;
-    justify-content: center;
-    background-color: #00D1D1;
-}
-.container {
-    position: absolute;
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin: center;
-}
-.container .lorem {
-    margin-top: 250vh;
-    align-items: center;
-    position: absolute;
-    width: 80%;
-    color: white;
-    height: 20vh;
-}
-h2 {
-    position: relative;
-    color: white;
-    text-align: center;
-    font-size: 12vw;
-    line-height: 0.6em;
-    font-weight: 900;
-    z-index: 1000;
-}
-h2 span {
-    font-size: 0.2em;
-    letter-spacing: 0.4em;
-    font-weight: 400;
-    text-transform: uppercase;
-}
-.block {
-    position: absolute;
-    width: 50px;
-    height: 100px;
-    background: #00D1D1;
-    box-shadow: 10px 10px 50px #00A3A3;
-    opacity: 0;
-}
-/* header active/sticky */
-header {
-position: fixed;
-top: 0;
-left: 0;
-width: 100%;
-display: flex;
-justify-content: space-between;
-align-items: center;
-transition: 0.6s;
-padding: 40px 100px;
-font-family: "Monsterrat", sans-serif;
-z-index: 10000;
-overflow: hidden;
-}
-header.sticky {
-    transition: none;
-}
-header.sticky ul:hover li:hover a:hover {
-    color: #00D1D1;
-    padding: 15px 18px;
-    transition: 0.5s;
-    transform: scale(1.1);
-    font-weight: 500;
-}
-header.sticky ul li a::after {
-visibility: hidden;
-display: none;
-color: #fbff00;
-transition: none;
-display: none;
-}
-header.sticky {
-padding: 5px 100px;
-background-color: darkcyan;
-color: #fbff00;
-position: fixed;
-transition: 0.6s;
-}
-header.sticky .logo,
-header.sticky ul li a {
-color: #fffffffa;
-text-shadow: 5px 5px 5px #00797960;
-outline: none;
-}
-/* header inactive */
-header .logo {
-position: relative;
-font-weight: 700;
-color: #ffffff;
-text-decoration: none;
-font-size: 3em;
-text-transform: uppercase;
-letter-spacing: 2px;
-transition: 0.6s;
-}
-@media screen and (max-width: 800px) {
-header :not(#active1, ul, li, .logo) {
-    display: none;
-}
-}
-header ul {
-position: relative;
-display: flex;
-justify-content: center;
-align-items: center;
-}
-header ul {
-list-style: none;
-text-align: center;
-}
-header ul li {
-display: inline-block;
-}
-header ul li a {
-display: block;
-padding: 15px;
-text-decoration: none;
-color: rgb(255, 255, 255);
-font-weight: 500px;
-font-family: "Monsterrat",sans-serif;
-text-transform: uppercase;
-margin: 0 10px;
-letter-spacing: 2px;
-outline: none;
-}
-header ul li a,
-header ul li a:after,
-header ul li a:before {
-transition: ease 0.5s;
-}
-header ul li a:hover {
-color: rgb(255, 255, 255);
-}
-header ul li a {
-position:relative;
-z-index: 1;
-}
-header ul li a:hover {
-color: #fff8eb;
-}
-header ul li a:after {
-display: inline-block;
-position: absolute;
-top: 0;
-left: 0;
-bottom: 0;
-right: 0;
-margin: auto;
-width: 100%;
-height: 1px;
-content: '.';
-color: transparent;
-background: #007575;
-visibility: none;
-opacity: 0;
-z-index: -1;
-}
-header ul li a:hover:after {
-opacity: 1;
-visibility: visible;
-height: 100%;
-}
+            font-family: "Poopins", sans-serif;
+            box-sizing: border-box;
+        }
 
-/* width */
-::-webkit-scrollbar {
-  width: 10px;
-  height: 10em;
-}
+        Body {
+            position: relative;
+            overflow-x: hidden;
+            display: flex;
+            justify-content: center;
+            background-color: #00D1D1;
+        }
 
-/* Track */
-::-webkit-scrollbar-track {
-    background: none;
-    border-radius: 5px;
-}
+        .container {
+            position: absolute;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin: center;
+        }
 
-/* Handle */
-::-webkit-scrollbar-thumb {
-    border-radius: 5px;
-    background: #007575;
-}
+        .container .lorem {
+            margin-top: 250vh;
+            align-items: center;
+            position: absolute;
+            width: 80%;
+            color: white;
+            height: 20vh;
+        }
 
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-    background: #00A3A3;
-}
+        h2 {
+            position: relative;
+            color: white;
+            text-align: center;
+            font-size: 12vw;
+            line-height: 0.6em;
+            font-weight: 900;
+            z-index: 1000;
+        }
 
-.lorems {
-    position: relative;
-    margin-top: 150vh;
-    color: white;
-    width: 80%;
-    margin: center;
-    align-items: center;
-}
-footer {
-    margin-top: 350vh;
-    width: 100%;
-    height: 100px;
-    position: absolute;
-    display: flex;
-    margin: center;
-    align-items: center;
-    justify-content: center;
-    padding: 300px 0 200px;
-}
-footer a {
-    text-decoration: none;
-    color: white;
-    font-weight: 100;
-    background: none;
-    transition: 0.5s;
-}
-footer a:hover {
-    color: darkcyan;
-}
+        h2 span {
+            font-size: 0.2em;
+            letter-spacing: 0.4em;
+            font-weight: 400;
+            text-transform: uppercase;
+        }
+
+        .block {
+            position: absolute;
+            width: 50px;
+            height: 100px;
+            background: #00D1D1;
+            box-shadow: 10px 10px 50px #00A3A3;
+            opacity: 0;
+        }
+
+        /* header active/sticky */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: 0.6s;
+            padding: 40px 100px;
+            font-family: "Monsterrat", sans-serif;
+            z-index: 10000;
+            overflow: hidden;
+        }
+
+        header.sticky {
+            transition: none;
+        }
+
+        header.sticky ul:hover li:hover a:hover {
+            color: #00D1D1;
+            padding: 15px 18px;
+            transition: 0.5s;
+            transform: scale(1.1);
+            font-weight: 500;
+        }
+
+        header.sticky ul li a::after {
+            visibility: hidden;
+            display: none;
+            color: #fbff00;
+            transition: none;
+            display: none;
+        }
+
+        header.sticky {
+            padding: 5px 100px;
+            background-color: darkcyan;
+            color: #fbff00;
+            position: fixed;
+            transition: 0.6s;
+        }
+
+        header.sticky .logo,
+        header.sticky ul li a {
+            color: #fffffffa;
+            text-shadow: 5px 5px 5px #00797960;
+            outline: none;
+        }
+
+        /* header inactive */
+        header .logo {
+            position: relative;
+            font-weight: 700;
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 3em;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: 0.6s;
+        }
+
+        @media screen and (max-width: 800px) {
+            header :not(#active1, ul, li, .logo) {
+                display: none;
+            }
+        }
+
+        header ul {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        header ul {
+            list-style: none;
+            text-align: center;
+        }
+
+        header ul li {
+            display: inline-block;
+        }
+
+        header ul li a {
+            display: block;
+            padding: 15px;
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+            font-weight: 500px;
+            font-family: "Monsterrat", sans-serif;
+            text-transform: uppercase;
+            margin: 0 10px;
+            letter-spacing: 2px;
+            outline: none;
+        }
+
+        header ul li a,
+        header ul li a:after,
+        header ul li a:before {
+            transition: ease 0.5s;
+        }
+
+        header ul li a:hover {
+            color: rgb(255, 255, 255);
+        }
+
+        header ul li a {
+            position: relative;
+            z-index: 1;
+        }
+
+        header ul li a:hover {
+            color: #fff8eb;
+        }
+
+        header ul li a:after {
+            display: inline-block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            margin: auto;
+            width: 100%;
+            height: 1px;
+            content: '.';
+            color: transparent;
+            background: #007575;
+            visibility: none;
+            opacity: 0;
+            z-index: -1;
+        }
+
+        header ul li a:hover:after {
+            opacity: 1;
+            visibility: visible;
+            height: 100%;
+        }
+
+        /* width */
+        ::-webkit-scrollbar {
+            width: 10px;
+            height: 10em;
+        }
+
+        /* Track */
+        ::-webkit-scrollbar-track {
+            background: none;
+            border-radius: 5px;
+        }
+
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+            border-radius: 5px;
+            background: #007575;
+        }
+
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+            background: #00A3A3;
+        }
+
+        .lorems {
+            position: relative;
+            margin-top: 150vh;
+            color: white;
+            width: 80%;
+            margin: center;
+            align-items: center;
+        }
+
+        footer {
+            margin-top: 350vh;
+            width: 100%;
+            height: 100px;
+            position: absolute;
+            display: flex;
+            margin: center;
+            align-items: center;
+            justify-content: center;
+            padding: 300px 0 200px;
+        }
+
+        footer a {
+            text-decoration: none;
+            color: white;
+            font-weight: 100;
+            background: none;
+            transition: 0.5s;
+        }
+
+        footer a:hover {
+            color: darkcyan;
+        }
     </style>
 </head>
+
 <body>
 
     <header class id="sticky">
         <a class="logo" href="index.html">anri</a>
-            <ul class="nav__links">
-                <li><a href="index.html" class="active" id="active1">Home</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contactus.html">contact</a></li>
-            </ul>
+        <ul class="nav__links">
+            <li><a href="index.html" class="active" id="active1">Home</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contactus.html">contact</a></li>
+        </ul>
     </header>
 
     <div class="container">
@@ -255,263 +284,306 @@ footer a:hover {
         <div class="lorem"></div>
     </div>
 
-    <p class="lorems">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum fuga ad dolores sunt, distinctio ullam. 
-        Omnis porro ducimus laboriosam veritatis, delectus, 
-        impedit reprehenderit corrupti eligendi vitae vero quaerat dolorumLorem ipsum dolor sit amet consectetur adipisicing elit. 
-        Rerum fuga ad dolores sunt, distinctio ullam. 
-        Omnis porro ducimus laboriosam veritatis, delectus, 
-        impedit reprehenderit corrupti eligendi vitae vero quaerat dolorumLorem ipsum dolor sit amet consectetur adipisicing elit. 
-        Rerum fuga ad dolores sunt, distinctio ullam. 
-        Omnis porro ducimus laboriosam veritatis, delectus, 
-        impedit reprehenderit corrupti eligendi vitae vero quaerat dolorumLorem ipsum dolor sit amet consectetur adipisicing elit. 
-        Rerum fuga ad dolores sunt, distinctio ullam. 
-        Omnis porro ducimus laboriosam veritatis, delectus, 
-        impedit reprehenderit corrupti eligendi vitae vero quaerat dolorumLorem ipsum dolor sit amet consectetur adipisicing elit. 
-        Rerum fuga ad dolores sunt, distinctio ullam. 
-        Omnis porro ducimus laboriosam veritatis, delectus, 
-        impedit reprehenderit corrupti eligendi vitae vero quaerat dolorumLorem ipsum dolor sit amet consectetur adipisicing elit. Rerum fuga ad dolores sunt, distinctio ullam. 
-        Omnis porro ducimus laboriosam veritatis, delectus, 
-        impedit reprehenderit corrupti eligendi vitae vero quaerat dolorumLorem ipsum dolor sit amet consectetur adipisicing elit. 
-        Rerum fuga ad dolores sunt, distinctio ullam. 
-        Omnis porro ducimus laboriosam veritatis, delectus, 
-        impedit reprehenderit corrupti eligendi vitae vero quaerat dolorumLorem ipsum dolor sit amet consectetur adipisicing elit. 
-        Rerum fuga ad dolores sunt, distinctio ullam. 
-        Omnis porro ducimus laboriosam veritatis, delectus, 
-        impedit reprehenderit corrupti eligendi vitae vero quaerat dolorumLorem ipsum dolor sit amet consectetur adipisicing elit. 
-        Rerum fuga ad dolores sunt, distinctio ullam. 
-        Omnis porro ducimus laboriosam veritatis, delectus, 
-        impedit reprehenderit corrupti eligendi vitae vero quaerat dolorumLorem ipsum dolor sit amet consectetur adipisicing elit. 
-        Rerum fuga ad dolores sunt, distinctio ullam. 
-        Omnis porro ducimus laboriosam veritatis, delectus, 
-        impedit reprehenderit corrupti eligendi vitae vero quaerat dolorumLorem ipsum dolor sit amet consectetur adipisicing elit. Rerum fuga ad dolores sunt, distinctio ullam. 
-        Omnis porro ducimus laboriosam veritatis, delectus, 
-        impedit reprehenderit corrupti eligendi vitae vero quaerat dolorumLorem ipsum dolor sit amet consectetur adipisicing elit. 
-        Rerum fuga ad dolores sunt, distinctio ullam. 
-        Omnis porro ducimus laboriosam veritatis, delectus, 
-        impedit reprehenderit corrupti eligendi vitae vero quaerat dolorumLorem ipsum dolor sit amet consectetur adipisicing elit. 
-        Rerum fuga ad dolores sunt, distinctio ullam. 
-        Omnis porro ducimus laboriosam veritatis, delectus, 
-        impedit reprehenderit corrupti eligendi vitae vero quaerat dolorumLorem ipsum dolor sit amet consectetur adipisicing elit. 
-        Rerum fuga ad dolores sunt, distinctio ullam. 
-        Omnis porro ducimus laboriosam veritatis, delectus, 
-        impedit reprehenderit corrupti eligendi vitae vero quaerat dolorumLorem ipsum dolor sit amet consectetur adipisicing elit. 
-        Rerum fuga ad dolores sunt, distinctio ullam. 
-        Omnis porro ducimus laboriosam veritatis, delectus, 
-        impedit reprehenderit corrupti eligendi vitae vero quaerat dolorumLorem ipsum dolor sit amet consectetur adipisicing elit. Rerum fuga ad dolores sunt, distinctio ullam. 
-        Omnis porro ducimus laboriosam veritatis, delectus, 
-        impedit reprehenderit corrupti eligendi vitae vero quaerat dolorumLorem ipsum dolor sit amet consectetur adipisicing elit. 
-        Rerum fuga ad dolores sunt, distinctio ullam. 
-        Omnis porro ducimus laboriosam veritatis, delectus, 
-        impedit reprehenderit corrupti eligendi vitae vero quaerat dolorumLorem ipsum dolor sit amet consectetur adipisicing elit. 
-        Rerum fuga ad dolores sunt, distinctio ullam. 
-        Omnis porro ducimus laboriosam veritatis, delectus, 
-        impedit reprehenderit corrupti eligendi vitae vero quaerat dolorumLorem ipsum dolor sit amet consectetur adipisicing elit. 
-        Rerum fuga ad dolores sunt, distinctio ullam. 
-        Omnis porro ducimus laboriosam veritatis, delectus, 
-        impedit reprehenderit corrupti eligendi vitae vero quaerat dolorumLorem ipsum dolor sit amet consectetur adipisicing elit. 
-        Rerum fuga ad dolores sunt, distinctio ullam. 
-        Omnis porro ducimus laboriosam veritatis, delectus, 
+    <p class="lorems">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum fuga ad dolores sunt, distinctio
+        ullam.
+        Omnis porro ducimus laboriosam veritatis, delectus,
+        impedit reprehenderit corrupti eligendi vitae vero quaerat dolorumLorem ipsum dolor sit amet consectetur
+        adipisicing elit.
+        Rerum fuga ad dolores sunt, distinctio ullam.
+        Omnis porro ducimus laboriosam veritatis, delectus,
+        impedit reprehenderit corrupti eligendi vitae vero quaerat dolorumLorem ipsum dolor sit amet consectetur
+        adipisicing elit.
+        Rerum fuga ad dolores sunt, distinctio ullam.
+        Omnis porro ducimus laboriosam veritatis, delectus,
+        impedit reprehenderit corrupti eligendi vitae vero quaerat dolorumLorem ipsum dolor sit amet consectetur
+        adipisicing elit.
+        Rerum fuga ad dolores sunt, distinctio ullam.
+        Omnis porro ducimus laboriosam veritatis, delectus,
+        impedit reprehenderit corrupti eligendi vitae vero quaerat dolorumLorem ipsum dolor sit amet consectetur
+        adipisicing elit.
+        Rerum fuga ad dolores sunt, distinctio ullam.
+        Omnis porro ducimus laboriosam veritatis, delectus,
+        impedit reprehenderit corrupti eligendi vitae vero quaerat dolorumLorem ipsum dolor sit amet consectetur
+        adipisicing elit. Rerum fuga ad dolores sunt, distinctio ullam.
+        Omnis porro ducimus laboriosam veritatis, delectus,
+        impedit reprehenderit corrupti eligendi vitae vero quaerat dolorumLorem ipsum dolor sit amet consectetur
+        adipisicing elit.
+        Rerum fuga ad dolores sunt, distinctio ullam.
+        Omnis porro ducimus laboriosam veritatis, delectus,
+        impedit reprehenderit corrupti eligendi vitae vero quaerat dolorumLorem ipsum dolor sit amet consectetur
+        adipisicing elit.
+        Rerum fuga ad dolores sunt, distinctio ullam.
+        Omnis porro ducimus laboriosam veritatis, delectus,
+        impedit reprehenderit corrupti eligendi vitae vero quaerat dolorumLorem ipsum dolor sit amet consectetur
+        adipisicing elit.
+        Rerum fuga ad dolores sunt, distinctio ullam.
+        Omnis porro ducimus laboriosam veritatis, delectus,
+        impedit reprehenderit corrupti eligendi vitae vero quaerat dolorumLorem ipsum dolor sit amet consectetur
+        adipisicing elit.
+        Rerum fuga ad dolores sunt, distinctio ullam.
+        Omnis porro ducimus laboriosam veritatis, delectus,
+        impedit reprehenderit corrupti eligendi vitae vero quaerat dolorumLorem ipsum dolor sit amet consectetur
+        adipisicing elit. Rerum fuga ad dolores sunt, distinctio ullam.
+        Omnis porro ducimus laboriosam veritatis, delectus,
+        impedit reprehenderit corrupti eligendi vitae vero quaerat dolorumLorem ipsum dolor sit amet consectetur
+        adipisicing elit.
+        Rerum fuga ad dolores sunt, distinctio ullam.
+        Omnis porro ducimus laboriosam veritatis, delectus,
+        impedit reprehenderit corrupti eligendi vitae vero quaerat dolorumLorem ipsum dolor sit amet consectetur
+        adipisicing elit.
+        Rerum fuga ad dolores sunt, distinctio ullam.
+        Omnis porro ducimus laboriosam veritatis, delectus,
+        impedit reprehenderit corrupti eligendi vitae vero quaerat dolorumLorem ipsum dolor sit amet consectetur
+        adipisicing elit.
+        Rerum fuga ad dolores sunt, distinctio ullam.
+        Omnis porro ducimus laboriosam veritatis, delectus,
+        impedit reprehenderit corrupti eligendi vitae vero quaerat dolorumLorem ipsum dolor sit amet consectetur
+        adipisicing elit.
+        Rerum fuga ad dolores sunt, distinctio ullam.
+        Omnis porro ducimus laboriosam veritatis, delectus,
+        impedit reprehenderit corrupti eligendi vitae vero quaerat dolorumLorem ipsum dolor sit amet consectetur
+        adipisicing elit. Rerum fuga ad dolores sunt, distinctio ullam.
+        Omnis porro ducimus laboriosam veritatis, delectus,
+        impedit reprehenderit corrupti eligendi vitae vero quaerat dolorumLorem ipsum dolor sit amet consectetur
+        adipisicing elit.
+        Rerum fuga ad dolores sunt, distinctio ullam.
+        Omnis porro ducimus laboriosam veritatis, delectus,
+        impedit reprehenderit corrupti eligendi vitae vero quaerat dolorumLorem ipsum dolor sit amet consectetur
+        adipisicing elit.
+        Rerum fuga ad dolores sunt, distinctio ullam.
+        Omnis porro ducimus laboriosam veritatis, delectus,
+        impedit reprehenderit corrupti eligendi vitae vero quaerat dolorumLorem ipsum dolor sit amet consectetur
+        adipisicing elit.
+        Rerum fuga ad dolores sunt, distinctio ullam.
+        Omnis porro ducimus laboriosam veritatis, delectus,
+        impedit reprehenderit corrupti eligendi vitae vero quaerat dolorumLorem ipsum dolor sit amet consectetur
+        adipisicing elit.
+        Rerum fuga ad dolores sunt, distinctio ullam.
+        Omnis porro ducimus laboriosam veritatis, delectus,
         impedit reprehenderit corrupti eligendi vitae vero quaerat dolorum</p>
-<div class="cards">
-    <style>
-        .cards {
-            margin-top: 230vh;
-            position: absolute;
-            width: 100vw;
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 100px;
-            background-color: #27c2c2;
-            box-shadow: 35px 0px 35px 35px#23a0a0;
-        }
-        .card1 {
-            display: grid;
-            grid-template-columns: 250px;
-            grid-template-rows: 160px 160px 30px;
-            grid-template-areas: "image" "text";
+    <div class="cards">
+        <style>
+            .cards {
+                margin-top: 230vh;
+                position: absolute;
+                width: 100vw;
+                height: 100vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 100px;
+                background-color: #27c2c2;
+                box-shadow: 35px 0px 35px 35px#23a0a0;
+            }
 
-            font-family: "roboto", sans-serif;
-            border-radius: 18px;
-            background: white;
-            box-shadow: 5px 5px 15px#1b7777;
-            text-align: center;
+            .card1 {
+                display: grid;
+                grid-template-columns: 250px;
+                grid-template-rows: 160px 160px 30px;
+                grid-template-areas: "image""text";
 
-            transition: 0.5s ease;
-            cursor: pointer;
-        }
-        .card-image1 {
-            grid-area: image;
-            background: url(https://cdn.discordapp.com/avatars/934095418353135718/dc2b30c625a59de17190e0fcce3eaaa4.png?size=4096);
-            border-top-left-radius: 15px;
-            border-top-right-radius: 15px;
-            background-size: cover;
-        }
-        .card-text1 {
-            grid-area: text;
-            margin: 25px;
-        }
-        .card-text1 p {
-            color: gray;
-            font-size: 15px;
-            font-weight: 300;
-            transition: 0.5s;
-        }
-        .card1 h2 {
-            margin-top: 0px;
-            font-size: 20px;
-            color: black;
-            transition: 0.5s;
-        }
-        .card1:hover {
-            transform: scale(1.2);
-            box-shadow: 5px 5px 15px#1b7777;
-        }
-        .card2 {
-            display: grid;
-            grid-template-columns: 280px;
-            grid-template-rows: 180px 180px 60px;
-            grid-template-areas: "image" "text";
+                font-family: "roboto", sans-serif;
+                border-radius: 18px;
+                background: white;
+                box-shadow: 5px 5px 15px#1b7777;
+                text-align: center;
 
-            font-family: "roboto", sans-serif;
-            border-radius: 18px;
-            background: white;
-            box-shadow: 5px 5px 15px#1b7777;
-            text-align: center;
+                transition: 0.5s ease;
+                cursor: pointer;
+            }
 
-            transition: 0.5s ease;
-            cursor: pointer;
+            .card-image1 {
+                grid-area: image;
+                background: url(https://cdn.discordapp.com/avatars/934095418353135718/dc2b30c625a59de17190e0fcce3eaaa4.png?size=4096);
+                border-top-left-radius: 15px;
+                border-top-right-radius: 15px;
+                background-size: cover;
+            }
 
-        }
-        .card-image2 {
-            grid-area: image;
-            background: url(https://cdn.discordapp.com/avatars/930847274370744361/f451209d5127e395cd2bf85f6a4666c0.png?size=4096);
-            border-top-left-radius: 15px;
-            border-top-right-radius: 15px;
-            background-size: cover;
-        }
-        .card-text2 {
-            grid-area: text;
-            margin: 25px;
-        }
-        .card-text2 p {
-            color: gray;
-            font-size: 15px;
-            font-weight: 300;
-            transition: 0.5s;
-        }
-        .card2 h2 {
-            margin-top: 0px;
-            font-size: 28px;
-            color: black;
-            transition: 0.5s;
-        }
-        .card2:hover {
-            transform: scale(1.2);
-            box-shadow: 5px 5px 15px#1b7777;
-        }
-        .card3 {
-            display: grid;
-            grid-template-columns: 250px;
-            grid-template-rows: 160px 160px 30px;
-            grid-template-areas: "image" "text";
+            .card-text1 {
+                grid-area: text;
+                margin: 25px;
+            }
 
-            font-family: "roboto", sans-serif;
-            border-radius: 18px;
-            background: white;
-            box-shadow: 5px 5px 15px#1b7777;
-            text-align: center;
+            .card-text1 p {
+                color: gray;
+                font-size: 15px;
+                font-weight: 300;
+                transition: 0.5s;
+            }
 
-            transition: 0.5s ease;
-            cursor: pointer;
+            .card1 h2 {
+                margin-top: 0px;
+                font-size: 20px;
+                color: black;
+                transition: 0.5s;
+            }
 
-        }
-        .card-image3 {
-            grid-area: image;
-            background: url(https://cdn.discordapp.com/avatars/929419146058420255/6f625ce35f90ce59b790c5cc51e72924.png?size=4096);
-            border-top-left-radius: 15px;
-            border-top-right-radius: 15px;
-            background-size: cover;
-        }
-        .card-text3 {
-            grid-area: text;
-            margin: 25px;
-        }
-        .card-text3 p {
-            color: gray;
-            font-size: 15px;
-            font-weight: 300;
-            transition: 0.5s;
-        }
-        .card3 h2 {
-            margin-top: 0px;
-            font-size: 20px;
-            color: black;
-            transition: 0.5s;
-        }
-        .card3:hover {
-            transform: scale(1.2);
-            box-shadow: 5px 5px 15px#1b7777;
-        }
-        .cards h2:hover {
-            transform: scale(1.1);
-            color: #00D1D1;
-        }
-        .cards p:hover {
-            transform: scale(1.05);
-            color: #27c2c2;
-        }
+            .card1:hover {
+                transform: scale(1.2);
+                box-shadow: 5px 5px 15px#1b7777;
+            }
+
+            .card2 {
+                display: grid;
+                grid-template-columns: 280px;
+                grid-template-rows: 180px 180px 60px;
+                grid-template-areas: "image""text";
+
+                font-family: "roboto", sans-serif;
+                border-radius: 18px;
+                background: white;
+                box-shadow: 5px 5px 15px#1b7777;
+                text-align: center;
+
+                transition: 0.5s ease;
+                cursor: pointer;
+
+            }
+
+            .card-image2 {
+                grid-area: image;
+                background: url(https://cdn.discordapp.com/avatars/930847274370744361/f451209d5127e395cd2bf85f6a4666c0.png?size=4096);
+                border-top-left-radius: 15px;
+                border-top-right-radius: 15px;
+                background-size: cover;
+            }
+
+            .card-text2 {
+                grid-area: text;
+                margin: 25px;
+            }
+
+            .card-text2 p {
+                color: gray;
+                font-size: 15px;
+                font-weight: 300;
+                transition: 0.5s;
+            }
+
+            .card2 h2 {
+                margin-top: 0px;
+                font-size: 28px;
+                color: black;
+                transition: 0.5s;
+            }
+
+            .card2:hover {
+                transform: scale(1.2);
+                box-shadow: 5px 5px 15px#1b7777;
+            }
+
+            .card3 {
+                display: grid;
+                grid-template-columns: 250px;
+                grid-template-rows: 160px 160px 30px;
+                grid-template-areas: "image""text";
+
+                font-family: "roboto", sans-serif;
+                border-radius: 18px;
+                background: white;
+                box-shadow: 5px 5px 15px#1b7777;
+                text-align: center;
+
+                transition: 0.5s ease;
+                cursor: pointer;
+
+            }
+
+            .card-image3 {
+                grid-area: image;
+                background: url(https://cdn.discordapp.com/avatars/929419146058420255/6f625ce35f90ce59b790c5cc51e72924.png?size=4096);
+                border-top-left-radius: 15px;
+                border-top-right-radius: 15px;
+                background-size: cover;
+            }
+
+            .card-text3 {
+                grid-area: text;
+                margin: 25px;
+            }
+
+            .card-text3 p {
+                color: gray;
+                font-size: 15px;
+                font-weight: 300;
+                transition: 0.5s;
+            }
+
+            .card3 h2 {
+                margin-top: 0px;
+                font-size: 20px;
+                color: black;
+                transition: 0.5s;
+            }
+
+            .card3:hover {
+                transform: scale(1.2);
+                box-shadow: 5px 5px 15px#1b7777;
+            }
+
+            .cards h2:hover {
+                transform: scale(1.1);
+                color: #00D1D1;
+            }
+
+            .cards p:hover {
+                transform: scale(1.05);
+                color: #27c2c2;
+            }
         </style>
-    <div class="card1">
-        <div class="card-image1"></div>
-        <div class="card-text1">
-        <h2>Esta music</h2>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic, quaerat id voluptatem soluta excepturi quod unde minus dolore animi aut doloremque.</p>
+        <div class="card1">
+            <div class="card-image1"></div>
+            <div class="card-text1">
+                <h2>Esta music</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic, quaerat id voluptatem soluta excepturi
+                    quod unde minus dolore animi aut doloremque.</p>
+            </div>
+        </div>
+        <div class="card2">
+            <div class="card-image2"></div>
+            <div class="card-text2">
+                <h2>mamasheni bot</h2>
+                <p>https://discord.com/api/oauth2/authorize?client_id=972833870221295719&permissions=274944478528&scope=bot%20applications.commands</p>
+            </div>
+        </div>
+        <div class="card3">
+            <div class="card-image3"><a href="#"></div>
+            <div class="card-text3">
+                <a href="#" style="text-decoration: none;" id="cardhref">
+                    <h2>GGC giveaways</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic, quaerat id voluptatem soluta
+                        excepturi quod unde minus dolore animi aut doloremque.</p>
+                </a>
+            </div>
+        </div>
     </div>
-</div>
-    <div class="card2">
-        <div class="card-image2"></div>
-        <div class="card-text2">
-        <h2>Esta mod</h2>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic, quaerat id voluptatem soluta excepturi quod unde minus dolore animi aut doloremque.</p>
-    </div>
-    </div>
-       <div class="card3">
-           <div class="card-image3"><a href="#"></div>
-           <div class="card-text3">
-           <a href="#" style="text-decoration: none;" id="cardhref"><h2>GGC giveaways</h2>
-           <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic, quaerat id voluptatem soluta excepturi quod unde minus dolore animi aut doloremque.</p>
-        </a>
-       </div>
-    </div>
-</div>
 
-        <footer>  
-            © 2022- All Right Reserved.<a href="https://github.com/MrAnri29" target="_blank"> &nbsp; MrAnri29 &nbsp; </a>   
-            </footer>  
+    <footer>
+        © 2022- All Right Reserved.<a href="https://github.com/MrAnri29" target="_blank"> &nbsp; MrAnri29 &nbsp; </a>
+    </footer>
 
     <script src="/JS/anime.min.js"></script>
     <script>
         const continer = document.querySelector('.container')
-        for (var i = 0; i <= 100; i++){
+        for (var i = 0; i <= 100; i++) {
             const blocks = document.createElement('div');
             blocks.classList.add('block');
             continer.appendChild(blocks);
             blocks.style.opacity = "1";
         }
 
-        function animateBlocks(){
+        function animateBlocks() {
             anime({
                 targets: '.block',
-                translateY: function(){
+                translateY: function () {
                     return anime.random(-400, 400);
                 },
-                translateX: function(){
+                translateX: function () {
                     return anime.random(-700, 700);
                 },
-                scale: function(){
-                    return anime.random(1,5);
+                scale: function () {
+                    return anime.random(1, 5);
                 },
 
                 easing: 'linear',
@@ -520,10 +592,11 @@ footer a:hover {
             })
         }
         animateBlocks()
-        window.addEventListener("scroll", function(){
-                var header = document.querySelector("header");
-                header.classList.toggle("sticky", window.scrollY > 0);
-            })
+        window.addEventListener("scroll", function () {
+            var header = document.querySelector("header");
+            header.classList.toggle("sticky", window.scrollY > 0);
+        })
     </script>
 </body>
+
 </html>
