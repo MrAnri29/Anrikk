@@ -1,41 +1,11 @@
-@media only screen and (max-width: 800px) {
-    .contact {
-        font-size: small;
-    }
-
-    #blackbox {
-        display: none;
-    }
-
-    input {
-        width: 100%;
-    }
-
-    .center-box {
-        flex-basis: 100%;
-    }
-
-    .right-box {
-        display: none;
-    }
-
-    .left-box {
-        display: none;
-    }
+* {
+    margin: 0;
+    padding: 0;
 }
 
-@media only screen and (max-width: 1000px) {
-    #blackbox {
-        display: none;
-    }
-
-    .right-box {
-        display: none;
-    }
-
-    .left-box {
-        display: none;
-    }
+Body {
+    background-color: goldenrod;
+    min-height: 100vh;
 }
 
 .contact h1 {
@@ -56,8 +26,6 @@ input {
     width: 60%;
     border: none;
     border-bottom: 1px solid gold;
-    justify-content: space-between;
-    flex-basis: 40%;
     outline: none;
     padding: 20px;
 }
@@ -70,14 +38,12 @@ input {
     text-align: center;
     padding: 10px;
     margin-top: 5%;
-    transition: 3s ease;
 }
 
 #send:hover {
     color: gold;
     background-color: #ffffff;
-    outline: gold;
-    border: 1px solid gold;
+    outline: 1px solid gold;
     transition: all 0.3s ease 0s;
     cursor: pointer;
 }
@@ -117,83 +83,5 @@ input {
     right: 0;
     bottom: 15%;
     padding: 30px;
-    margin: auto;
     font-family: "Montserrat", sans-serif;
-}
-
-#status {
-    width: 60%;
-    outline: none;
-    border-radius: 30px;
-    border: green;
-    background: yellow;
-    color: white;
-    font-family: "Monsterrat", sans-serif;
-    padding: 20px;
-    margin-top: 2%;
-    justify-content: center;
-    text-align: center;
-    transition: 3s ease;
-    display: none;
-}
-
-@keyframes status {
-    0% {
-        opacity: 1;
-        pointer-events: all;
-    }
-
-    10% {
-        opacity: 0.9;
-        pointer-events: all;
-    }
-
-    20% {
-        opacity: 0.8;
-        pointer-events: all;
-    }
-
-    30% {
-        opacity: 0.7;
-        pointer-events: all;
-    }
-
-    40% {
-        opacity: 0.6;
-        pointer-events: none;
-    }
-
-    50% {
-        opacity: 0.5;
-        pointer-events: none;
-    }
-
-    60% {
-        opacity: 0.4;
-        pointer-events: none;
-    }
-
-    70% {
-        opacity: 0.3;
-        pointer-events: none;
-    }
-
-    80% {
-        opacity: 0.2;
-        pointer-events: none;
-    }
-
-    90% {
-        opacity: 0.1;
-        pointer-events: none;
-    }
-
-    100% {
-        opacity: 0;
-        pointer-events: none;
-    }
-}
-
-Body {
-    background-color: goldenrod;
 }
