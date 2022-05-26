@@ -59,7 +59,9 @@
 }
 @media screen and (max-width: 370px) {
     #blackbox {
-        height: 65%;
+        left: 5%;
+        width: 90%;
+        height: 70%;
         font-size: 13px;
     }
 
