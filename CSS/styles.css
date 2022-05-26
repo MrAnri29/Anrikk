@@ -109,8 +109,19 @@ header ul li a {
   outline: none;
 }
 
+header ul li a,
+header ul li a:after,
+header ul li a:before {
+  transition: ease 0.5s;
+}
+
 header ul li a {
   position: relative;
+  z-index: 1;
+}
+
+header ul li a:hover {
+  color: #fff8eb;
 }
 
 header ul li a:after {
@@ -123,11 +134,18 @@ header ul li a:after {
   margin: auto;
   width: 100%;
   height: 1px;
-  content: '.';
+  content: '';
   color: transparent;
   background: #b47b0098;
   visibility: none;
   opacity: 0;
+  z-index: -1;
+}
+
+header ul li a:hover:after {
+  opacity: 1;
+  visibility: visible;
+  height: 100%;
 }
 
 /* start background/banner/welcomemsg */
