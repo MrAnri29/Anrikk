@@ -1,10 +1,10 @@
-body{
+body {
     min-height: 100vh
-    }
+}
 
-@media only screen and (max-width: 370px) {
+@media only screen and (max-width: 300px) {
     #blackbox {
-        height: 500px;
+        height: 700px;
     }
 
     .bottom {
@@ -38,6 +38,7 @@ body{
         height: 500px;
     }
 }
+
 @media only screen and (max-width: 800px) {
     .contact {
         font-size: small;
