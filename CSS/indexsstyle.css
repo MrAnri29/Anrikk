@@ -1,0 +1,63 @@
+@media screen and (max-width: 1000px) {
+    #welcometoesta {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 0;
+        height: 100%;
+        gap: 0;
+        flex-direction: column;
+        background-color: #ffac1c;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+    }
+
+    .nav-item {
+        margin: 16px 0;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    header.sticky ul:hover li:hover a:hover {
+        color: black;
+        outline: 1px solid black;
+        border: none;
+        border-radius: 0;
+        background-color: #ffac1c;
+        padding: 10px 18px;
+    }
+
+    header.sticky ul li a::after {
+        visibility: hidden;
+        display: none;
+        color: #ffac1c;
+        transition: none;
+        display: none;
+    }
+
+    .hamburger.sticky .bar{
+        background-color: black;
+    }
+}

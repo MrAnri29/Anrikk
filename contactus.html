@@ -1,62 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>contact me!</title>
-        <link rel="shortcut icon" href="">
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="/CSS/styles.css">
-        <link rel="stylesheet" href="./CSS/contactus.css">
-        <link rel="stylesheet" href="./CSS/contactmemedia.css">
-        <link href="https://fonts.googleapis.com/css?family=Montserrat:500&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/CSS/styles.css">
+  <link rel="stylesheet" href="./CSS/contactus.css">
+  <link rel="stylesheet" href="./CSS/contactmemedia.css">
+  <link rel="stylesheet" href="./CSS/indexsstyle.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:500&display=swap" rel="stylesheet">
 </head>
+
 <body>
-          <header class>
-            <a class="logo" href="index.html">anri</a>
-                <ul class="nav__links">
-                    <li><a href="index.html" class="active" id="active">Home</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contactus.html">contact</a></li>
-                </ul>
-        </header>
-        <script type="text/javascript">
-            window.addEventListener("scroll", function(){
-                var header = document.querySelector("header");
-                header.classList.toggle("sticky", window.scrollY > 0);
-            })
-        </script>
-          <div class="contact" id="contact">
-            <div class="center-box" id="form">
-                <h1>Contact ME</h1>
-                <br>
-                <h3>if you want to contact me just fill next strokes</h3>
-                <div class="inputrow">
-              <form action="https://formsubmit.co/mr.anriko29@gmail.com" method="POST" id="my-form">
-                    <input type="hidden" name="_next" value="https://anrivachnadze.netlify.app/contactus">
-                    <input type="hidden" name="_subject" value="Someone contacted you with your portfolio!">
-                    <input type="hidden" name="_captcha" value="false">
-                    <input type="hidden" name="_template" value="table">
-                    <input type="text" name="name" placeholder="name: Elon Musk" id="name" required>
-                    <input type="email" name="email" placeholder="email: elonmusk@tesla.com" id="email" required>
-                    <input type="text" name="subject" placeholder="subject: Job application" id="subject" required>
-                    <input type="text" name="message" placeholder="Your msg: Congratulations! You are our staff member now!" id="message" required>
-                    <button id="send" class="send" type="submit">send</button>
-                  </form>
-                </div>
-            </div>
-            <div class="right-box"></div>
-            <div class="blackbox-nav">
-            <div id="blackbox">
-                <h2>Info</h1>
-                <p><br><br>contact me if you have any questions or want to take me as your emplyee.<br><br>by contacting me you are allowing me to send you reply message via email.
-                Don't be scared dude, I am not hacker and I am not going to hack or harm you darling.<br><br>mail: mr.anriko29@gmail.com</p>
-            </div>
-          </div>
-        </div>
-        <div class="bottom"></div>
+  <header class id="sticky">
+    <a class="logo" href="index.html">Anri</a>
+    <ul class="nav__links nav-menu">
+      <li class="nav-item"><a href="index.html" class="active nav-link" id="active1">Home</a></li>
+      <li class="nav-item"><a href="projects.html" class="nav-link">Projects</a></li>
+      <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+      <li class="nav-item"><a href="contactus.html" class="nav-link">contact</a></li>
+    </ul>
+    <div class="hamburger">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+  </header>
+  <script type="text/javascript">
+    window.addEventListener("scroll", function () {
+      var header = document.querySelector("header");
+      var hamburger = document.querySelector(".hamburger");
+      hamburger.classList.toggle("sticky", window.scrollY > 0);
+      header.classList.toggle("sticky", window.scrollY > 0);
+    })
+  </script>
+  <div class="contact" id="contact">
+    <div class="center-box" id="form">
+      <h1>Contact ME</h1>
+      <br>
+      <h3>if you want to contact me just fill next strokes</h3>
+      <div class="inputrow">
+        <form action="https://formsubmit.co/mr.anriko29@gmail.com" method="POST" id="my-form">
+          <input type="hidden" name="_next" value="https://anrivachnadze.netlify.app/contactus">
+          <input type="hidden" name="_subject" value="Someone contacted you with your portfolio!">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_template" value="table">
+          <input type="text" name="name" placeholder="name: Elon Musk" id="name" required>
+          <input type="email" name="email" placeholder="email: elonmusk@tesla.com" id="email" required>
+          <input type="text" name="subject" placeholder="subject: Job application" id="subject" required>
+          <input type="text" name="message" placeholder="Your msg: Congratulations! You are our staff member now!"
+            id="message" required>
+          <button id="send" class="send" type="submit">send</button>
+        </form>
+      </div>
+    </div>
+    <div class="right-box"></div>
+    <div class="blackbox-nav">
+      <div id="blackbox">
+        <h2>Info</h1>
+          <p><br><br>contact me if you have any questions or want to take me as your emplyee.<br><br>by contacting me
+            you are allowing me to send you reply message via email.
+            Don't be scared dude, I am not hacker and I am not going to hack or harm you darling.<br><br>mail:
+            mr.anriko29@gmail.com</p>
+      </div>
+    </div>
+  </div>
+  <div class="bottom"></div>
+  <script type="text/javascript" src="/JS/mobile.js"></script>
 </body>
+
 </html>
