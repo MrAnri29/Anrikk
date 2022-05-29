@@ -9,6 +9,8 @@ Body {
     display: flex;
     justify-content: center;
     background-color: #00D1D1;
+    margin: 0;
+    padding: 0;
 }
 
 .container {
@@ -118,12 +120,6 @@ header .logo {
     text-transform: uppercase;
     letter-spacing: 2px;
     transition: 0.6s;
-}
-
-@media screen and (max-width: 800px) {
-    header :not(#active1, ul, li, .logo) {
-        display: none;
-    }
 }
 
 header ul {

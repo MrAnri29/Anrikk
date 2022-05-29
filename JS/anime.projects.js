@@ -27,5 +27,7 @@ function animateBlocks() {
 animateBlocks()
 window.addEventListener("scroll", function () {
     var header = document.querySelector("header");
+    var hamburger = document.querySelector(".hamburger");
+    hamburger.classList.toggle("sticky", window.scrollY > 0);
     header.classList.toggle("sticky", window.scrollY > 0);
 })
